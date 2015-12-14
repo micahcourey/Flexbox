@@ -3,22 +3,43 @@
 ==================================== */
 
 @media (min-width: 769px) {
-
-  .main-header, .main-nav {
+  /*** Display links on second line below the title ***/
+  .main-header, .main-nav, .row {
     display: flex;
   }
-
+  /*** Display header links horizontally and centered ***/
   .main-header {
     flex-direction: column;
     align-items: center;
+  }
+  /*** Give each column a flex value of 1 so each column takes up the same amount of space
+       and set the flex basis value to 50% to set the initial size of the columns  ***/
+  .col {
+    flex: 1 50%;
+  }
+  /*** Make the .row content a multi-line flex container ***/
+  .row {
+    flex-wrap: wrap;
+  }
+  /*** Give the secodary content column a order value of -1 so that it appears first ***/
+  .secondary {
+    order: -1;
   }
 
 }
 
 @media (min-width: 1025px) {
-
+  /*** Display nav bar on 1 line with links on right and title on left ***/
   .main-header {
     flex-direction: row;
     justify-content: space-between;
+  }
+  /*** Display all 3 columns on 1 line ***/
+  .col {
+    flex-basis: 0;
+  }
+  /*** Make the primary content column larger ***/
+  .primary {
+    flex-grow: 1.4;
   }
 }

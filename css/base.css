@@ -1,4 +1,4 @@
-/* ================================= 
+/* =================================
   Base Element Styles
 ==================================== */
 
@@ -57,7 +57,7 @@ img {
 }
 .main-nav a {
 	font-size: .95em;
-	color: #3acec2;
+	color: #3590F3;
 	text-transform: uppercase;
 }
 .main-nav a:hover {
@@ -76,7 +76,7 @@ img {
 }
 .banner {
 	color: #fff;
-	background: #3acec2;
+	background: #3590F3;
 	padding: 3.2em 0;
 	margin-bottom: 48px;
 }
