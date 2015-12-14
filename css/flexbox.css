@@ -1,10 +1,28 @@
 /* =================================
+  Base Styles
+==================================== */
+
+/*** Make the body a flex container with a min-height 100% of the view port to be
+     able to make the footer stick to the bottom of the page  ***/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/*** Give .row columns a value of 1 so that the columns will fill the available
+     screen space and force the footer to the bottom of the page ***/
+.row {
+  flex: 1;
+}
+
+
+/* =================================
   Media Queries
 ==================================== */
 
 @media (min-width: 769px) {
-  /*** Display links on second line below the title ***/
-  .main-header, .main-nav, .row {
+  /*** Make these page elements flex containers ***/
+  .main-header, .main-nav, .row, .col {
     display: flex;
   }
   /*** Display header links horizontally and centered ***/
@@ -13,9 +31,10 @@
     align-items: center;
   }
   /*** Give each column a flex value of 1 so each column takes up the same amount of space
-       and set the flex basis value to 50% to set the initial size of the columns  ***/
+       and set the flex direction value to column so the content is displayed vertically  ***/
   .col {
-    flex: 1 50%;
+    flex: 1;
+    flex-direction: column;
   }
   /*** Make the .row content a multi-line flex container ***/
   .row {
@@ -25,6 +44,14 @@
   .secondary {
     order: -1;
   }
+  /*** Apply auto to the top margin of the buttons so they align at the bottom of their
+      flex container and apply align-self property with the flex-start value so the buttons
+      don't stretch the full width of their parent container ***/
+  .button {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
 
 }
 
